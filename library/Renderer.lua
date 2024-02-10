@@ -15,18 +15,21 @@ function Window.get_height() end
 function Window.minimize() end
 
 --- Is window minimized
+--- @return boolean
 function Window.is_minimized() end
 
 --- Maximize the window
 function Window.maximize() end
 
 --- Is window maximized
+--- @return boolean
 function Window.is_maximized() end
 
 --- Restore the specified window if it was previously iconified(minimized) or maximized.
 function Window.restore() end
 
 --- Is window in fullscreen borderless mode
+--- @return boolean
 function Window.is_fullscreen_borderless() end
 
 --- Set window to be in fullscreen borderless mode
@@ -52,3 +55,8 @@ function Renderer.get_viewport_width() end
 --- Useful when RenderPipeline is not directly rendering to the window surface
 --- @return UVec2
 function Renderer.get_viewport_size() end
+
+--- Get current offsets of the rendered surface <br>
+--- Useful when RenderPipeline is not directly rendering to the window surface
+--- @return Vec2
+function Renderer.get_viewport_offset() end
