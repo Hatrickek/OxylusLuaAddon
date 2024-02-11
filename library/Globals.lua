@@ -46,5 +46,11 @@ function on_init() end
 --- @param dt float # delta time
 function on_update(dt) end
 
+--- Called every frame <br>
+--- ImGui functions must be called here
+--- @param dt float # delta time
+function on_imgui_render(dt) end
+
+
 --- Called right before scene runtime stops
 function on_release() end

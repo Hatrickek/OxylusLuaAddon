@@ -30,6 +30,55 @@ function Entity.get_LightComponent(self) end
 --- @return MeshComponent
 function Entity.get_MeshComponent(self) end
 
+--- @enum AlphaMode
+AlphaMode = {
+    Opaque = AlphaMode,
+    Blend = AlphaMode,
+    Mask = AlphaMode
+}
+
+--- @class Material
+Material = {}
+
+--- @return string
+function Material.get_name(self) end
+
+--- @param color Vec4
+function Material.set_color(self, color) end
+
+--- @param color Vec4
+function Material.set_emissive(self, color) end
+
+--- @param value number
+function Material.set_roughness(self, value) end
+
+--- @param value number
+function Material.set_metallic(self, value) end
+
+--- @param value number
+function Material.set_reflectance(self, value) end
+
+--- @param mode AlphaMode
+function Material.set_alpha_mode(self, mode) end
+
+--- @param value number
+function Material.set_alpha_cutoff(self, value) end
+
+--- @param value number
+function Material.set_double_sided(self, value) end
+
+--- @return boolean
+function Material.set_double_sided(self, value) end
+
+--- @return string
+function Material.alpha_mode_to_string(self, value) end
+
+--- @class MaterialComponent
+--- @field materials Material[]
+
+--- @return MaterialComponent
+function Entity.get_MaterialComponent(self) end
+
 --- @class Camera
 Camera = {}
 function Camera.set_yaw(self, value) end
