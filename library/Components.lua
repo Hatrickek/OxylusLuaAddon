@@ -26,6 +26,7 @@ function Entity.get_LightComponent(self) end
 --- @field mesh_base Mesh
 --- @field node_index number
 --- @field cast_shadows boolean
+--- @field materials Material[]
 
 --- @return MeshComponent
 function Entity.get_MeshComponent(self) end
@@ -39,6 +40,10 @@ AlphaMode = {
 
 --- @class Material
 Material = {}
+
+--- @param name string
+--- @return Material
+function Material.new(name) end
 
 --- @return string
 function Material.get_name(self) end
@@ -72,12 +77,6 @@ function Material.set_double_sided(self, value) end
 
 --- @return string
 function Material.alpha_mode_to_string(self, value) end
-
---- @class MaterialComponent
---- @field materials Material[]
-
---- @return MaterialComponent
-function Entity.get_MaterialComponent(self) end
 
 --- @class Camera
 Camera = {}
